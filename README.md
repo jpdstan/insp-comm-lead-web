@@ -4,8 +4,8 @@ insp-comm-lead-web
 Source code for the Inspiring Community Leaders website. 
 
 
-License
-=====
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Stanley Kwong
