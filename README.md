@@ -4,6 +4,10 @@ insp-comm-lead-web
 Source code for the Inspiring Community Leaders website. 
 
 
+## About
+
+This website is a basic SPA that utilizes the Twitter Bootstrap and AngularJS frameworks. 
+
 ## License
 
 The MIT License (MIT)
