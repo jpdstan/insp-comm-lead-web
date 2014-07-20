@@ -1,0 +1,29 @@
+{
+    "posts": [
+        {
+            "header": "Thanks for checking in. We're currently working on the website-- please come back later!",
+            "author": "Stanley Kwong",
+            "date"  : ["2014", "6", "1"],
+            "text"  : "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!",
+            "links" : [],
+            "index" : "0"
+        }
+      , {
+            "header": "Use Protection with Pointers",
+            "author": "Weyman Kwong",
+            "team"  : "Ducky",
+            "date"  : ["2014", "7", "29"],
+            "text"  : "It's important to choose types that cannot be used in ways for which they weren't intended. This ensures that problems are detected earlier and that your interfaces are clean and expressive. I often think about what types tell me. Just by looking at the type of a variable (perhaps a function parameter), what can I determine about the values that it should take? Raw pointers are far too ambiguous. It is possible to use them in ways much broader than their intended use, often with terrible consequences. If you see a function with a pointer parameter, it is difficult to know what you should be passing to the function without reading its documentation. Even then, you'd better hope the documentation was correct and you are passing the correct things. The more specific we can be with our types the better, as it ensures that our code is safe, trustworthy, and easily understood. As with many things in C++, we can often achieve this with little to no run-time cost.",
+            "links" : [],
+            "index" : "1"
+        }
+      , {
+            "header": "I Love Pointers",
+            "author": "Gandhi X",
+            "date"  : ["2014", "7", "29"],
+            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
+            "links" : [],
+            "index" : "2"
+        }
+    ],
+}
