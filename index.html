@@ -1,37 +1,45 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app=inspLead>
-	<head>
-		<meta charset="utf-8">
-		<title>Inspiring Community Leaders</title>
-		<meta name="description" content="The Official Website of Inspiring Community Leaders" />
-		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="scripts/css/bootstrap.css" type="text/css" rel="stylesheet" />
-		<link href="scripts/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-		<link href="scripts/css/bootstrap-responsive.css" type="text/css" rel="stylesheet" />
-		<link href="scripts/css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet" />
-		<link href="scripts/css/blog.css" type="text/css" rel="stylesheet" />
-		<script src="scripts/js/angular.min.js"></script>
-		<script src="scripts/js/angular-route.js"></script>
-		<script src="scripts/js/main.js"></script>
-		<script src="scripts/js/bootstrap.js"></script>
-		<script src="scripts/js/bootstrap.min.js"></script>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>Inspiring Community Leaders</title>
+	<meta name="description" content="The Official Website of Inspiring Community Leaders" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="scripts/css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet" />
+	<link href="scripts/css/blog.css" type="text/css" rel="stylesheet" />
+	<script src="scripts/js/angular.min.js"></script>
+	<script src="scripts/js/angular-route.js"></script>
+	<script src="scripts/js/main.js"></script>
+	<script src="scripts/js/bootstrap.min.js"></script>
+	<script src="scripts/js/jquery-2.1.1.min.js"></script>
+	<script src="scripts/js/animations.js"></script>
+</head>
 
-	<body>
-		<div class="blog-masthead">
+<body>
+	<div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+				<a class="blog-nav-item" href="#/">Home</a>
+				<a class="blog-nav-item" href="#/about">About</a>
+				<a class="blog-nav-item" href="#/members">Members</a>
+				<a class="blog-nav-item" href="#/contact">Contact</a>
+			</nav>
+		</div>
+	</div>
+	<main role="main">
+		<div class="blog-header-background">
 			<div class="container">
-		        	<nav class="blog-nav">
-				        <a class="blog-nav-item active" href="#/">Home</a>
-				        <a class="blog-nav-item" href="#/about">About</a>
-				        <a class="blog-nav-item" href="#/members">Members</a>
-				        <a class="blog-nav-item" href="#/contact">Contact</a>	
-				 </nav>
+				<div class="blog-header">
+					<a href="#/"><h1 class="blog-title">Inspiring Commnuity Leaders</h1></a>
+					<p class="lead blog-description">Your inpsiring motto/description to be inserted here.</p>
+				</div>
 			</div>
 		</div>
-		<main ng-controller="BlogController" role="main">
+		<div class="container">
 			<div ng-view></div>
-    		</main>
-	</body>
+		</div>
+	</main>
+</body>
 
 </html>

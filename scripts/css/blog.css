@@ -2,9 +2,10 @@
  * Globals
  */
 
-body {
+ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
+  overflow: scroll;
 }
 
 h1, .h1,
@@ -24,9 +25,10 @@ h6, .h6 {
  * Override Bootstrap's default container.
  */
 
-@media (min-width: 1200px) {
+ @media (min-width: 1200px) {
   .container {
     width: 970px;
+    position: relative;
   }
 }
 
@@ -35,13 +37,15 @@ h6, .h6 {
  * Masthead for nav
  */
 
-.blog-masthead {
+ .blog-masthead {
   background-color: #428bca;
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
 /* Nav links */
+.blog-nav {
+}
 .blog-nav-item {
   position: relative;
   display: inline-block;
@@ -56,10 +60,10 @@ h6, .h6 {
 }
 
 /* Active state gets a caret at the bottom */
-.blog-nav .active {
+.blog-nav a.active {
   color: #fff;
 }
-.blog-nav .active:after {
+.blog-nav a.active:after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -78,9 +82,16 @@ h6, .h6 {
  * Blog name and description
  */
 
-.blog-header {
+ .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.blog-header-background {
+  background-color: #ff9900;
+  margin-bottom: 20px;
+}
+.blog-header a {
+  text-decoration: none;
 }
 .blog-title {
   margin-top: 30px;
@@ -98,7 +109,7 @@ h6, .h6 {
  * Main column and sidebar layout
  */
 
-.blog-main {
+ .blog-main {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -138,24 +149,34 @@ h6, .h6 {
  * Blog posts
  */
 
-.blog-post {
-  margin-bottom: 60px;
+ .blog-post {
+  margin-bottom: 26px;
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .blog-post-meta {
   margin-bottom: 20px;
   color: #999;
 }
 
+/*
+ * About page
+ */
+.about-img {
+  height: 140px;
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+
+}
 
 /*
  * Footer
  */
 
-.blog-footer {
+ .blog-footer {
   padding: 40px 0;
   color: #999;
   text-align: center;
