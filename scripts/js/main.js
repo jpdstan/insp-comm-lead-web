@@ -14,7 +14,7 @@
           , "July", "August", "September", "October", "November", "December"
         ];
 
-        var month = monthNames[this.date.getMonth()]
+        var month = monthNames[this.date.getMonth()];
         var day   = this.date.getDate();
         var year  = this.date.getFullYear();
 
@@ -31,7 +31,7 @@
 
 	var app = angular.module("inspLead", ['ngRoute']);
 
-    module.config(['$routeProvider', function($routeProvider) {
+    app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/', {
             templateUrl: 'pages/blog.html',
@@ -56,9 +56,9 @@
         });
     }]);
 
-    module.service('ParseJSONService', function($http) {
+    app.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
-            var promise = $http.get("http://jpdstan.github.io/iron-panthers-web/text-content/blogs.json")
+            var promise = $http.get("http://jpdstan.github.io/insp-comm-lead-web/posts.json")
                 .then(function (response) {
                     return response.data;
             });
@@ -66,7 +66,7 @@
         }
     });
 
-    module.controller("BlogController", function($scope, ParseJSONService) {
+    app.controller("BlogController", function($scope, ParseJSONService) {
         $scope.posts = [];
         ParseJSONService.getParsedJSON().then(function (data) {
             var parsedJSON = data;
@@ -87,11 +87,11 @@
         });
     });
 
-    module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
+    app.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
         $scope.post_id = $routeParams.postId;
     }]);
 
-    module.directive("isoTime", function() {
+    app.directive("isoTime", function() {
         return {
             link: function (scope, element, attrs) {
                 var time = attrs.myIsoTime;
@@ -99,5 +99,4 @@
             }
         }
     });
-
-})
+})();
