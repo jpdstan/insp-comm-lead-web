@@ -30,13 +30,13 @@
     "events": [
         {
             "header": "Fraternity Party/Fundraiser",
-            "date"  : ["2014", "7", "30"],
+            "date"  : "July 30th, 2014",
             "desc"  : "Get wasted all night with the crew!",
             "invite": "http://github.com"
         }
       , {
             "header": "Sung Kang's Quinceanera",
-            "date"  : ["2014", "8", "16"],
+            "date"  : "August 16th, 2014",
             "desc"  : "Let's get wasted again!",
             "invite": "http://github.com"
         }
