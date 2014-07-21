@@ -1,0 +1,19 @@
+<table class="table" ng-controller="MemberController">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Position</th>
+			<th>Major</th>
+			<th>About</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="member in members">
+			<td><img src="{{ member.portrait[0] }}" /><br /><h4>{{ member.name }}</h4></td>
+			<td>{{ member.position }}</td>
+			<td>{{ member.major }}</td>
+			<td>{{ member.desc }}</td>
+		</tr>
+	</tbody>
+</table>
+

@@ -21,6 +21,14 @@
         return month + " " + day + ", " + year;
     }
 
+
+    var Event = function(header, date, desc, invite) {
+        this.header = header;
+        this.date   = date;
+        this.desc   = desc;
+        this.invite = invite;
+    }
+
 	var Member = function(name, portrait, position, major, desc) {
         this.name     = name;
         this.portrait = portrait;
@@ -29,19 +37,12 @@
         this.desc     = desc;
     }
 
-    var Event = function(header, date, desc, invite) {
-        this.header = header;
-        this.date   = date;
-        this.desc   = desc;
-        this.invite = invite;
-    }
-	var app = angular.module("inspLead", ['ngRoute']);
+    var app = angular.module("inspLead", ['ngRoute']);
 
     app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: 'pages/blog.html',
-            controller: 'BlogController'
+            templateUrl: 'pages/blog.html'
         }).
         when('/posts/:postId', {
             templateUrl: 'pages/blog-post.html',
@@ -52,7 +53,7 @@
         }).       
         when('/members', {
             templateUrl: 'pages/members.html',
-            controller: 'RosterController'
+            controller: 'MemberController'
         }).
         when('/contact', {
             templateUrl: 'pages/contact.html',
@@ -95,6 +96,41 @@
     app.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
         $scope.post_id = $routeParams.postId;
     }]);
+
+    app.controller("EventController", function($scope, ParseJSONService) {
+        $scope.events = [];
+        ParseJSONService.getParsedJSON().then(function (data) {
+            var parsedJSON = data;
+            for (var i = 0; i < parsedJSON.events.length; i++) {
+                var oneEvent = parsedJSON.events[i]; // would have named the variable "event" if it weren't a reserved word
+                $scope.events.push(new Event(
+                        oneEvent.header
+                      , oneEvent.date
+                      , oneEvent.desc
+                      , oneEvent.invite
+                    )
+                );
+            }
+        });
+    });
+
+    app.controller("MemberController", function($scope, ParseJSONService) {
+        $scope.members = [];
+        ParseJSONService.getParsedJSON().then(function (data) {
+            var parsedJSON = data;
+            for (var i = 0; i < parsedJSON.members.length; i++) {
+                var member = parsedJSON.members[i]; // would have named the variable "event" if it weren't a reserved word
+                $scope.members.push(new Member(
+                        member.name
+                      , member.portrait
+                      , member.position
+                      , member.major
+                      , member.desc
+                    )
+                );
+            }
+        });
+    });
 
     app.directive("isoTime", function() {
         return {
