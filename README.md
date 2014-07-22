@@ -1,7 +1,7 @@
 insp-comm-lead-web
 ==================
 
-Source code for the Inspiring Community Leaders website. 
+Source code for the Inspiring Community Leaders website. The website is not currently publicly available as of now but should be by the end of July. 
 
 
 ## About
