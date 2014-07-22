@@ -25,5 +25,38 @@
             "links" : [],
             "index" : "2"
         }
+    ],
+    
+    "events": [
+        {
+            "header": "Fraternity Party/Fundraiser",
+            "date"  : "July 30th, 2014",
+            "desc"  : "Get wasted all night with the crew!",
+            "invite": "http://github.com"
+        }
+      , {
+            "header": "Sung Kang's Quinceanera",
+            "date"  : "August 16th, 2014",
+            "desc"  : "Let's get wasted again!",
+            "invite": "http://github.com"
+        }
+    ],
+    
+    "members": [
+        {
+            "name"     : "Sung Kang",
+            "portrait" : ["img/sungkang.jpg"],
+            "position" : "CEO",
+            "major"    : "Economics",
+            "desc"     : "Sung Kang built this organization from the ground up in 1965 after he led the March on Washington." 
+        }
+      , {
+            "name"     : "Max Chen",
+            "portrait" : ["img/maxchen.jpg"],
+            "position" : "Secretary",
+            "major"    : "Cosmetology",
+            "desc"     : "Max Chen was a runaway slave that worked meticulously with the Underground Railroad. He was well-acquainted with the likes of Harriet Tubman and Frederick Douglass." 
+        }
+          
     ]
 }
