@@ -1,7 +1,7 @@
 insp-comm-lead-web
 ==================
 
-Source code for the Inspiring Community Leaders website. The website is not currently publicly available as of now but should be by the end of July. 
+Source code for the Inspiring Community Leaders website.
 
 http://jpdstan.github.io/insp-comm-lead-web/index.html#/
 
