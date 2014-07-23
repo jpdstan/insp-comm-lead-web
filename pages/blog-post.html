@@ -12,17 +12,16 @@
       <h3>Upcoming events</h3>
       <div class="sidebar-events" ng-repeat="event in events">
         <h4>{{ event.header }}</h4>
-        <h4>{{ event.date }}</h4>
+        <h5>{{ event.date }}</h5>
         <p>{{ event.desc }}</p>
         <a href="{{ event.invite }}"><p>Sign Up</p></a>
       </div>
     </div>
-    <div class="sidebar-module">
-      <h4>Elsewhere</h4>
+    <div class="sidebar-module sidebar-social">
+      <h3>Social</h3>
       <ol class="list-unstyled">
-        <li><a href="http://github.com/jpdstan/insp-comm-lead-web">GitHub</a></li>
-        <li><a href="http://twitter.com">Twitter</a></li>
-        <li><a href="http://facebook.com">Facebook</a></li>
+        <li><a href="http://github.com/jpdstan/insp-comm-lead-web"><img src="img/github.svg" /> GitHub</a></li>
+        <li><a href="http://facebook.com"><img src="img/facebook.svg" /> Facebook</a></li>
       </ol>
     </div>
   </div><!-- /.row -->
