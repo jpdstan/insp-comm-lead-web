@@ -206,23 +206,29 @@ h6, .h6 {
   display: block;
   width: 180px;
   margin: 0 auto;
-
 }
 
 /*
  * Member table. Overwriting some stuff in bootstrap.css
  */
  .table td {
-  max-width: 140px;
-  max-height: 140px;
   overflow:hidden;
  }
- .table h4 {
-  text-align: center;
+ .table p {
   margin-top: 6px;
+  font-size: 16px;
+  text-align: center;
  }
-.table img {
-  width: 100%;
+.table img { 
+  /* Try to use squared images, otherwise the aspect gets messed up */
+  height: 140px;
+  width: 140px;
+  border-radius: 140px;
+  -webkit-border-radius: 140px;
+  -moz-border-radius: 140px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
 
