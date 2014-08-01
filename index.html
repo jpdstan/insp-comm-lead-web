@@ -10,20 +10,19 @@
 	<link href="scripts/css/blog.css" type="text/css" rel="stylesheet" />
 	<script src="scripts/js/angular.min.js"></script>
 	<script src="scripts/js/angular-route.js"></script>
-	<script src="scripts/js/main.js"></script>
 	<script src="scripts/js/bootstrap.min.js"></script>
-	<script src="scripts/js/jquery-2.1.1.min.js"></script>
+	<script src="scripts/js/main.js"></script>
 	<script src="scripts/js/animations.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-536726046d4a3901"></script>
 </head>
 
 <body>
 	<div class="blog-masthead">
 		<div class="container">
-			<nav class="blog-nav">
-				<a class="blog-nav-item" href="#/">Home</a>
-				<a class="blog-nav-item" href="#/about">About</a>
+			<nav>
+				<a class="blog-nav-item" href="#/">Blog</a>
+				<a class="blog-nav-item" href="#/events">Events</a>
 				<a class="blog-nav-item" href="#/members">Members</a>
+				<a class="blog-nav-item" href="#/about">About</a>
 				<a class="blog-nav-item" href="#/contact">Contact</a>
 			</nav>
 		</div>
@@ -39,15 +38,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container" ng-controller="BlogController">
 			<div ng-view></div>
+
 		</div>
 	</main>
 	<div class="blog-footer">
-      <p>Copyright &copy; 2014. Site created by <a href="https://stanley-kwong.appspot.com">Stanley Kwong</a>.</p>
       <p>
-        <a href="#">Back to top</a>
+        <a href="#">Home</a> | <a href="#/about">About</a> | <a href="#/contact">Contact us</a>
       </p>
+      <p>Copyright &copy; 2014. Site created by <a href="https://stanley-kwong.appspot.com">Stanley Kwong</a>.</p>
     </div>
 </body>
 

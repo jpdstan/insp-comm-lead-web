@@ -20,7 +20,7 @@
       , {
             "header": "I Love Pointers",
             "author": "Gandhi X",
-            "date"  : ["2014", "7", "29"],
+            "date"  : ["2014", "8", "29"],
             "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
             "links" : [],
             "index" : "2"
@@ -29,34 +29,80 @@
     
     "events": [
         {
-            "header": "Fraternity Party/Fundraiser",
-            "date"  : "July 30th, 2014",
-            "desc"  : "Get wasted all night with the crew!",
-            "invite": "http://github.com"
+            "header"  : "Fraternity Party/Fundraiser",
+            "date"    : ["2014", "7", "29"],
+            "desc"    : "Get wasted all night with the crew! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+            "links"   : ["img/events/test.png"],
+            "invite"  : "http://github.com",
+            "address" : "608 portofino ln",
+            "active"  : true
         }
       , {
-            "header": "Sung Kang's Quinceanera",
-            "date"  : "August 16th, 2014",
-            "desc"  : "Let's get wasted again!",
-            "invite": "http://github.com"
+            "header"  : "Sung Kang's Quinceanera",
+            "date"    : ["2014", "8", "16"],
+            "desc"    : "Let's get wasted again!",
+            "links"   : [],
+            "invite"  : "http://github.com",
+            "address" : "",
+            "active"  : false
+        }
+      , {
+            "header"  : "Max Chen's Birthday Party",
+            "date"    : ["2014", "9", "12"],
+            "desc"    : "nde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
+            "links"   : ["img/events/test2.svg"],
+            "invite"  : "http://github.com",
+            "address" : "",
+            "active"  : true
+        }
+      , {
+            "header"  : "Full House Reunion",
+            "date"    : ["2014", "9", "26"],
+            "desc"    : "nde omnis iste natus error sit voluptatem accusantium doloremque laudantiumdoloremque laudantiumdoloremque laudantium, totam rem aperiam, eaque",
+            "links"   : [],
+            "invite"  : "http://github.com",
+            "address" : "",
+            "active"  : true
+        }
+      , {
+            "header"  : "Some more filler text",
+            "date"    : ["2014", "9", "26"],
+            "desc"    : "nde omnis iste natus error sit voluptatem accusantium doloremque laudantiumdoloremque ue laudantium, totam rem aperiam, eaque",
+            "links"   : [],
+            "invite"  : "http://github.com",
+            "address" : "",
+            "active"  : true
         }
     ],
     
     "members": [
         {
+            "name"     : "Ramzy J. Azar",
+            "portrait" : [],
+            "position" : "Club President",
+            "major"    : "n/a",
+            "desc"     : "C: (415) 710 0342 / E: ramzyazar@my.smccd.edu" 
+        }
+      , {
+            "name"     : "Boris Shkuro",
+            "portrait" : [],
+            "position" : "Vice President",
+            "major"    : "n/a",
+            "desc"     : "C: (415) 624 9048 / E: bshkurko@my.smccd.edu" 
+        }            
+      , {
             "name"     : "Sung Kang",
             "portrait" : ["img/sungkang.jpg"],
             "position" : "CEO",
             "major"    : "Economics",
-            "desc"     : "Sung Kang built this organization from the ground up in 1965 after he led the March on Washington." 
+            "desc"     : "Sung Kang built this organization from the ground up in 1965 after he led the March on Washington. C: / E:" 
         }
       , {
             "name"     : "Max Chen",
             "portrait" : ["img/maxchen.jpg"],
             "position" : "Secretary",
             "major"    : "Cosmetology",
-            "desc"     : "Max Chen was a runaway slave that worked meticulously with the Underground Railroad. He was well-acquainted with the likes of Harriet Tubman and Frederick Douglass." 
+            "desc"     : "Max Chen was a runaway slave that worked meticulously with the Underground Railroad. He was well-acquainted with the likes of Harriet Tubman and Frederick Douglass. C: / E:" 
         }
-          
     ]
 }

@@ -6,40 +6,52 @@
         this.text   = text;
         this.links  = imgLinks;
         this.index  = index;
-	}
-
-    Post.prototype.getDatePlain = function() {
-        var monthNames = [
-            "January", "February", "March", "April", "May", "June"
-          , "July", "August", "September", "October", "November", "December"
-        ];
-
-        var month = monthNames[this.date.getMonth()]
-        var day   = this.date.getDate();
-        var year  = this.date.getFullYear();
-
-        return month + " " + day + ", " + year;
-    }
-
-
-    var Event = function(header, date, desc, invite) {
-        this.header = header;
-        this.date   = date;
-        this.desc   = desc;
-        this.invite = invite;
-    }
-
+	};
+    var Event = function(header, date, desc, imgLinks, invite, address, active) {
+        this.header   = header;
+        this.date     = date;
+        this.desc     = desc;
+        this.links    = imgLinks;
+        this.invite   = invite;
+        this.address  = address;
+        this.active   = active;
+    };
 	var Member = function(name, portrait, position, major, desc) {
         this.name     = name;
         this.portrait = portrait;
         this.position = position;
         this.major    = major;
         this.desc     = desc;
+    };
+    Post.prototype.getDatePlain = Event.prototype.getDatePlain =function(date){
+        var monthNames = [
+            "January", "February", "March", "April", "May", "June"
+          , "July", "August", "September", "October", "November", "December"
+        ];
+
+        var month = monthNames[date.getMonth()-1]
+        var day   = date.getDate();
+        var year  = date.getFullYear();
+
+        return month + " " + day + ", " + year;
+    };
+
+    Event.prototype.formatAddress = function(address){
+        var formattedAddress = "";
+        address = address.split(" ");
+        for (var i = 0; i < address.length; i++){
+            if (i == address.length - 1){
+                formattedAddress += address[i];
+                break;
+            }
+            formattedAddress += address[i] += "+";
+        }
+        return formattedAddress;
     }
 
     var app = angular.module("inspLead", ['ngRoute']);
 
-    app.config(['$routeProvider', function($routeProvider) {
+    app.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/', {
             templateUrl: 'pages/blog.html'
@@ -48,15 +60,17 @@
             templateUrl: 'pages/blog-post.html',
             controller: 'BlogDetailCtrl'
         }).
+        when('/events', {
+            templateUrl: 'pages/events.html'
+        }).
         when('/about', {
-            templateUrl: 'pages/about.html',
+            templateUrl: 'pages/about.html'
         }).       
         when('/members', {
-            templateUrl: 'pages/members.html',
-            controller: 'MemberController'
+            templateUrl: 'pages/members.html'
         }).
         when('/contact', {
-            templateUrl: 'pages/contact.html',
+            templateUrl: 'pages/contact.html'
         }).
         otherwise({
             redirectTo: '/'
@@ -65,7 +79,8 @@
 
     app.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
-            var promise = $http.get("http://jpdstan.github.io/insp-comm-lead-web/posts.json")
+            var promise = $http.get("posts.json")
+            // http://jpdstan.github.io/insp-comm-lead-web/posts.json
                 .then(function (response) {
                     return response.data;
             });
@@ -75,6 +90,8 @@
 
     app.controller("BlogController", function($scope, ParseJSONService) {
         $scope.posts = [];
+        $scope.events = [];
+        $scope.members = [];
         ParseJSONService.getParsedJSON().then(function (data) {
             var parsedJSON = data;
 
@@ -90,36 +107,21 @@
                     )
                 );
             }
-        });
-    });
-
-    app.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
-        $scope.post_id = $routeParams.postId;
-    }]);
-
-    app.controller("EventController", function($scope, ParseJSONService) {
-        $scope.events = [];
-        ParseJSONService.getParsedJSON().then(function (data) {
-            var parsedJSON = data;
             for (var i = 0; i < parsedJSON.events.length; i++) {
                 var oneEvent = parsedJSON.events[i]; // would have named the variable "event" if it weren't a reserved word
                 $scope.events.push(new Event(
                         oneEvent.header
-                      , oneEvent.date
+                      , new Date(oneEvent.date[0], oneEvent.date[1], oneEvent.date[2])
                       , oneEvent.desc
+                      , oneEvent.links
                       , oneEvent.invite
+                      , oneEvent.address
+                      , oneEvent.active
                     )
                 );
             }
-        });
-    });
-
-    app.controller("MemberController", function($scope, ParseJSONService) {
-        $scope.members = [];
-        ParseJSONService.getParsedJSON().then(function (data) {
-            var parsedJSON = data;
             for (var i = 0; i < parsedJSON.members.length; i++) {
-                var member = parsedJSON.members[i]; // would have named the variable "event" if it weren't a reserved word
+                var member = parsedJSON.members[i];
                 $scope.members.push(new Member(
                         member.name
                       , member.portrait
@@ -131,6 +133,10 @@
             }
         });
     });
+
+    app.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
+        $scope.post_id = $routeParams.postId;
+    }]);
 
     app.directive("isoTime", function() {
         return {

@@ -1,0 +1,17 @@
+<div class="panel-container">
+	<div ng-repeat="event in events" class="panel panel-default">
+		<div class="panel-heading">
+			<time x-iso-time="{{ event.date.toISOString() }}">{{ event.getDatePlain(event.date) }} — </time>
+			{{ event.header }}
+		</div>
+		<div class="panel-body">
+			<img id="preview" ng-src="{{ event.links[0] }}"
+			<p>{{ event.desc }}</p>
+		<!--<p>Spots left: {{ event.capacity }}</p> -->
+			<div>
+				<a href="https://www.google.com/maps/place/{{ event.formatAddress(event.address) }}" target="_blank"><img id="map" src="img/maps.svg" /></a>
+			</div>
+			<a href="{{ event.invite }}" target="_blank"><button type="button">Sign up</button></a>
+		</div>
+	</div>
+</div>
