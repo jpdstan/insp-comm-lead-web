@@ -1,9 +1,9 @@
-insp-comm-lead-web
+inspiring-community-web
 ==================
 
 Source code for the Inspiring Community Leaders website.
 
-http://jpdstan.github.io/insp-comm-lead-web/index.html#/
+http://jpdstan.github.io/inspiring-community-web/index.html#/
 
 
 ## About
