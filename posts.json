@@ -29,18 +29,18 @@
     
     "events": [
         {
-            "header"  : "Fraternity Party/Fundraiser",
+            "header"  : "Event Fundraiser",
             "date"    : ["2014", "7", "29"],
-            "desc"    : "Get wasted all night with the crew! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+            "desc"    : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
             "links"   : ["img/events/test.png"],
             "invite"  : "http://github.com",
-            "address" : "608 portofino ln",
+            "address" : "1 Mangini Way, Burlingame CA",
             "active"  : true
         }
       , {
             "header"  : "Sung Kang's Quinceanera",
             "date"    : ["2014", "8", "16"],
-            "desc"    : "Let's get wasted again!",
+            "desc"    : "Let's have a blast!",
             "links"   : [],
             "invite"  : "http://github.com",
             "address" : "",
@@ -95,14 +95,14 @@
             "portrait" : ["img/sungkang.jpg"],
             "position" : "CEO",
             "major"    : "Economics",
-            "desc"     : "Sung Kang built this organization from the ground up in 1965 after he led the March on Washington. C: / E:" 
+            "desc"     : "Sung Kang built this organization from the ground up in 1965. C: / E:" 
         }
       , {
             "name"     : "Max Chen",
             "portrait" : ["img/maxchen.jpg"],
             "position" : "Secretary",
             "major"    : "Cosmetology",
-            "desc"     : "Max Chen was a runaway slave that worked meticulously with the Underground Railroad. He was well-acquainted with the likes of Harriet Tubman and Frederick Douglass. C: / E:" 
+            "desc"     : "Max Chen is a vital member to this operation; keep a close eye on him. C: / E:" 
         }
     ]
 }
