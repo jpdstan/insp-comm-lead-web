@@ -1,7 +1,7 @@
 inspiring-community-web
 ==================
 
-Source code for the Inspiring Community Leaders website.
+Source code for the Inspiring Community Leaders website. Note that this specific repository is not used by the organization. 
 
 
 ## About
