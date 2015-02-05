@@ -3,8 +3,6 @@ inspiring-community-web
 
 Source code for the Inspiring Community Leaders website.
 
-http://jpdstan.github.io/inspiring-community-web/index.html#/
-
 
 ## About
 
